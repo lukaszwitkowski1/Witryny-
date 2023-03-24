@@ -1,0 +1,48 @@
+
+        /* ustawienie czerwonego koloru czcionki dla elementów oznaczonych klasą red-text (class="red-text") */
+        .red-text {
+            color: red;
+        }
+        .green-text {
+            color: lime;
+        }
+        /* ustawienie stylu znacznika kdb CSS */
+        kbd {
+            border-radius: 2px;
+            padding: 2px;
+            fd
+            border: 1px solid black;
+        }
+
+        /* ustawienie łączenia obramowania tabeli */
+        table {
+            border-collapse: collapse;
+        }
+
+        /* ustawienie czarnego obramowania tabeli */
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 3px;
+        }
+        
+        /* ustawienie stylu komórki nagłówkowej tabeli  */
+        th {
+            background-color: #ccc;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* ustawienie marginesu dla wszystkich elementów div */
+        div {
+            margin-bottom: 20px;
+        }
+        
+        picture.full-width img{
+
+            max-width: 100%;
+        }
+        
+        
+        
+     

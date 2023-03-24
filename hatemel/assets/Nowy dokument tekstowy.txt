@@ -1,0 +1,12 @@
+<ol>
+    <li>Borowik</li>
+    <li>Borowik Szlachetny</li>
+    <li>Podgrzybek</li>
+    <li>Rydz</li>
+    <li>Pieczarka</li>
+    <li>Gołąbek</li>
+    <li>Opieniek</li>
+    <li>czubajka</li>
+    <li>Kozak</li>
+    <li>Prawdziwek</li>
+</ol>
