@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+    
+        <!--
+            UWAGA! 
+            Posługujemy się wyłącznie selektorami, nie dopisujemy żadnych klas, identyfikatorów itp.
+            Dopisujemy jedynie selektory, właściwości i ich wartości w odpowiednich miejscach.
+
+            Pracę oddajemy jako archiwum zip lub rar katalogu sprawdzianu dopisując swoje imię i nazwisko + data na końcu nazwy.
+
+            Punktacja
+            30pkt. (+1 opcjonalny bonus); od 28pkt  cel, od 24pkt - bdb, od 19,5pkt - db, od 15pkt - dst, od 10,5 pkt - dop
+        --> 
+
+<html lang="pl">
+    <head>
+        <title>Zajęcia CSS - dziedziczenie</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="CSS podstawy i selektory sprawdzian">
+        <meta name="author" content="[Tu wpisz swoje imię i nazwisko]">
+        <meta name="robots" content="noindex,nofollow"> 
+        <meta http-equiv="X-Ua-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="/style.css">
+        <style>
+
+            div.container{
+                margin: 50px auto;
+            }
+
+            #container_four a {
+                display: block;
+                padding: 5px;
+                margin-top: 5px;
+                border: 5px solid grey;
+            }
+            * #container_one h1{
+            color:red;
+        }
+            body{
+            font-size: 12px;
+           }
+           
+        div.container_two p{
+            color:blue
+        }
+        p::selection{
+            color:hotpink;
+        }
+        div:last-of-type p{
+            color:indigo;
+        }
+        div:last-of-type:hover p{
+            color:red;
+        }
+        .test{
+            background-color: lightgreen;
+            
+        }
+        .test.wiary{
+            color:yellow;
+        }
+        #container_one h1{
+            color:green;
+        }
+        #container_one h2{
+            background-color: orange;
+            color:white;
+        }
+        #container_one span{
+            font-size:200%;
+        }
+        #container_one p:first-of-type::first-line {
+            color:violet;
+        }
+        #container_one p:first-of-type::first-letter {
+            color: purple;
+            font-size: 50px;
+        }
+        #special{
+            background-color: yellow;
+        }
+        .alert{
+            border: 1px solid grey;
+        }
+        .alert.stop{
+            background-color: red;
+        }
+        .alet.go{
+            color: white;
+        }
+        #container_two span{
+            font-weight: bold;
+        }
+        a[href*="teb.edu.pl"] {
+            color: orange;
+        }
+        a[href*="teb.edu.pl"]:visited{
+            color:green;
+        }
+        a[href*="teb.edu.pl"]:hover{
+            text-decoration: none;
+        }
+        tr:nth-child(even) {
+            background-color: #333;
+            color: white;
+        }
+        #container_four a[title] {
+            border-color: pink;
+        }
+        #container_four a[href*="contact"] {
+            border-color: orange;
+        }
+        #container_four a[href^="https"] {
+            border-color: green;
+        }
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        
+
+        <!-- zadanie 1 (9pkt)
+            Używając styli wewnętrznych dokumentu (osadzenie wew. <style>) ustaw wszsytkim elementom domyślny rozmiar czcionki na 12px oraz kolor na ciemny szary {font-size: 14px; color: #666;}
+            Ustaw wszytkim p występujących w div o klasie container_two kolor czcionki na niebieski {color: blue;}
+            Ostyluj stan zaznaczenia (pseudoelement) dowolnego akapitu <p> ustawiając kolor tła na hotpink {background: hotpink;}
+            Wszystkim akapitom <p> występującym w <div> (tj. wszytskim będącym jego bezpośrednimi dziećmi) naddaj styl: { padding: 20px; }
+            Wszystkim elementom w ostatnim elemencie <div> (last-of-type) nadaj kolor indygo {color: indigo;}
+            Wszystkim elementom w ostatnim elemencie <div> (last-of-type) po najechaniu zmień kolor na czerwony {color: red;}    
+            Wszystkim elementom o klasie "test" nadaj background-color: lightgreen;, a elementom dodatkowo zawierającym klasę "wiary" zmień kolor czcionki dowolnie;
+        -->
+
+
+
+        <!-- zadanie 2 (7 pkt 1/6)
+            Uwaga! W stylach wewnętrznych i swosując zapisy wyłącznie w pierwszym kontenerze o id container_one:
+            
+            Ustaw w poniższym kolor czionki nagłwóka <h1> na zielony używając właściwego selektora oraz { color: green; }
+            Ustaw nagłówkowi <h2> pomarańczowy background i kolor czcionki biały {background-color: orange; color: white; }
+            Ustaw wielkość czcionki tekstu umieczonego w  <span> na 200%  krzystając z {font-size: 200%;}
+            W pierwszym wystąpieniu akapitu <p> wenątrz kontenera (first-of-type) zmień kolor czcionki pierwszej linii na dowolny {color: x;} oraz zmień kolor i wielkość pierwszej litery na 50px {color: purple; font-size: 50px;}     
+            W pliku zewnętrznym styli nadpisz (wymuś!) kolor nagłówka h1 tego kontenera na dowolny (inny niż zielony); !!!! + 1 dodatkowy pkt za napisanie w komentarzu pod selektorem jak inaczej można by to wykonać.
+        -->
+
+        <div class="container" id="container_one">
+              <h1 class="pierwszy_naglowek">This is a heading</h1>
+              <p>Veggies es proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui repellat voluptatum dolor possimus molestiae nihil similique, earum eveniet quos exercitationem, amet totam sequi aliquam quia minima eius tempore dignissimos ducimus, cum eos. Temporibus optio odit a reiciendis veritatis maxime rerum numquam ad et commodi, voluptatum, repellat, debitis facere alias laboriosam? Porro placeat sed, ex fuga pariatur quod nisi ducimus numquam optio. Reprehenderit voluptate exercitationem voluptatum error veritatis, suscipit quae illum quo ut maxime nobis molestias ex laboriosam illo consectetur itaque rem. Placeat, in voluptatum labore maxime fugit incidunt cum obcaecati nemo facilis, aperiam dolore odit minus tempore numquam sit earum.</p>
+              <h2>A level 2 heading</h2>
+              <p>Gumbo beet greens corn soko endive <span>gumbo gourd</span>. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. <b>Dandelion</b> cucumber earthnut pea peanut oko zucchini.</p>
+        </div>
+
+        
+        <!-- zadanie 3 (5 pkt)
+            W stylach wew. lub pliku zew. styli (style.css): 
+
+            Nadaj elementowi o identyfikatorze special żółte tło {background-color: yellow; }.
+            Nadaj elementowi z klasą alert szare obramowanie o szerokości 1 piksela { border: 1px solid grey; }.
+            Jeśli element z klasą alert ma również klasę stop, ustaw tło na czerwono. {background-color: red; }
+            Jeśli element z klasą alert ma również klasę go, spraw, aby tło było zielone  { color: white; }  
+            Jedynie w div o id container_two pogrub czcionkę tekstu w każdym <span> występującym w akapicie <p> używając właściwości {font-weight: bold;} 
+        -->
+
+        <div class="container container_two" id="container_two">
+            <h1>This is a heading</h1>
+            <p>Veggies es
+                <span class="alert">bonus vobis</span>, proinde vos postulo
+                <span class="alert stop">essum magis</span>
+                kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+            <h2 id="special">A level 2 heading</h2>
+            <p>Gumbo beet greens corn soko endive gumbo gourd.</p>
+            <h2>Another level 2 heading</h2>
+            <p>
+                <span class="alert go">Parsley shallot</span>
+                courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+            </p>
+      </div>
+
+      <!-- zadanie 4 (6 pkt - 4/1) 
+            Ostylzuj łącze zawierające w atrybucie href frazę "teb.edu.pl", zmieniając stan łącza (link) na pomarańczowy {color: orange;}, odwiedzone (visited) łącza na zielony {color: green;} i usuwając podkreślenie po najechaniu (hover) myszką {text-decoration: none;}.
+            Ustaw tło co drugiego wiersza w tabeli, wybierając te wiersze i nadając im kolor tła nr 333 {background-color: #333;} i biały kolor czionki dla każdej komórki tego wiersza  {color: white;}.
+       -->
+
+
+      <div class="container" id="container_tree">
+        <p>Veggies es <a href="https://teb.edu.pl" target="_blank">teb.edu.pl</a>, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+        <p class="test wiedzy">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+        <table class="tabela">
+            <tbody>
+            <tr>
+                <th>Fruits</th>
+                <th>Vegetables</th>
+            </tr>
+            <tr>
+                <td class="test wiedzy">Apple</td>
+                <td>Potato</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>Carrot</td>
+            </tr>
+            <tr>
+                <td class="test wiary">Tomato</td>
+                <td>Parsnip</td>
+            </tr>
+            <tr>
+                <td>Kiwi</td>
+                <td>Onion</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>Beet</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+       
+        <!-- zadanie 5 (3 pkt) - specyficzność selektorów i selektory atrybutów
+
+            W stylach wew. lub pliku zew. styli (style.css): 
+            Elementy <a> z atrybutem tytułu (dowolnym) ostyluj kolor obramowania: różowy {border-color: pink;}.
+            Elementy <a> z atrybutem href, który gdzieś w swojej wartości zawiera słowo "contact" ostyluj ustawiając ich obramowanie na pomarańczowo {border-color: orange;}.
+            Elementy <a> z wartością href zaczynającą się od https ostyluj nadając zieloną ramkę  {border-color: green;}
+        -->
+        <div class="container" id="container_four">
+            <ul>
+                <li><a href="https://example.com">Link 1</a></li>
+                <li><a href="http://example.com" title="Visit example.com">Link 2</a></li>
+                <li><a href="/contact">Link 3</a></li>
+                <li><a href="../contact/index.html">Link 4</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, excepturi! Praesentium, corrupti. Deleniti, aspernatur consequatur. Commodi magni deleniti dolorem ipsam at accusantium quam laboriosam iste cumque. Minima, id omnis error exercitationem obcaecati odio. Quasi optio rem doloremque alias itaque praesentium voluptatibus ab ipsa unde assumenda in natus nam vel expedita inventore quis atque, quod error! Reprehenderit iusto, officiis consectetur sint corporis dolor doloremque aliquid consequatur praesentium, sunt nulla obcaecati sequi cumque autem vero exercitationem accusantium ad adipisci. Aperiam repellat qui reprehenderit atque suscipit vitae ullam consequuntur, aut porro nemo id voluptatem praesentium culpa optio libero sunt corporis perferendis officiis vero cumque voluptatibus, alias nulla. Voluptas est quas eaque vel aperiam ex expedita quo, reprehenderit accusantium fuga doloribus modi tempora consequatur a aliquid quisquam minima! Illo veritatis impedit, minus, maxime soluta corporis eaque mollitia labore voluptate excepturi nisi facilis, non esse. Deserunt fugiat unde animi cupiditate temporibus ut quisquam nisi, error voluptates excepturi, ducimus veniam est ipsa culpa! Repellendus neque assumenda labore quibusdam non voluptatibus voluptatum, fuga atque, nostrum blanditiis ad, earum iure quaerat dolorem quos eveniet cupiditate provident velit sint. Modi inventore doloremque amet, iste, consectetur, assumenda quidem ratione vel corrupti libero at perspiciatis vitae voluptatum! Eligendi officia deserunt delectus.</p>
+        </div>
+
+
+    </body>
+</html> 
