@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ikona.jpg">
+    <title>Formularz lotu</title>
+    <style>
+       body {
+        background-image: url('samolot.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+       p {
+            font-size: 40px;
+        }
+
+        fieldset {
+            border: 1px solid #000;
+            border-radius: 10px; 
+            padding: 10px; 
+        }
+
+        legend {
+            border: 1px solid black; 
+            padding: 3px 5px;
+            border-radius: 10px;
+        }
+
+        #sigma{
+            width: 120px;
+        }
+         label #sigma{ 
+            border: 1px solid black; 
+            padding: 3px 5px;
+            border-radius: 10px;
+        }
+      
+    </style>
+</head>
+<body>
+    <a id="gora"></a>
+    <p>Formularz Zapytania</p>
+    <div>
+    <fieldset>
+        <legend id="Lot">Lot</legend><br>
+        <form action="" method="get">
+        <label for="data">
+        <legend id="sigma" id="DataW">Data wylotu</legend>
+        <input type="datetime-local"><br><br>
+        <legend id="sigma" id="MiejsceW">Miejsce wylotu</legend>
+        <select id="Miasto" name="Miasto"><br><br>
+            <option value="Katowice">Katowice</option>
+            <option value="Wrocław">Wrocław</option>
+            <option value="Warszawa">Warszawa</option>
+            <option value="Rybnik">Poznań</option>
+        </select><br><br>
+        <legend id="sigma" id="MiejsceD" required>Miejsce Docelowe</legend>
+        <select id="Kraj" name="Kraj">
+            <option value="Japonia">Japonia</option>
+            <option value="Karaiby">Karaiby</option>
+            <option value="Niemcy">Niemcy</option>
+            <option value="Holandia">Holandia</option>
+        </select><br><br>
+        <legend id="sigma">Bagaz</legend>
+        <input type="radio" id="bagaz" name="bagaz" value="Tak">
+        <label for="Tak">Tak</label><br>
+        <input type="radio" id="bagaz" name="bagaz" value="Nie">
+        <label for="no">Nie</label><br><br>
+        <legend id="sigma">Liczba bagazy</legend>
+        <input type="number" style="width: 40px;" required><br><br>
+        <legend id="sigma">Ilosc osob</legend>
+        <input type="range"><br><br>
+        <legend id="sigma">Klasa</legend>
+       <input type="radio" id="KlasaB" name="Buisnes" value="Buisnes Klasa"> <label>Buisnes</label>
+       <input type="radio" id="KlasaE" name="tak" value="Ekonomic klasa"> <label>Ekonomic</label>
+    </fieldset><br>
+    <fieldset> 
+    <legend id="Dane">Dane</legend>
+    Imie<br>
+    <input type="text" id="firstname" name="imie" placeholder="Wpisz imie" required><br>
+    Nazwisko<br>
+    <input type="text" id="lastname" name="nazwisko" placeholder="Wpisz nazwisko" required><br>
+    Email<br>
+    <input type="email" id="email" name="email" placeholder="Wpisz email"><br>
+    Numer tel<br>
+    <input type="number" id="numertel" required><br>
+    </fieldset> <br>  
+    <fieldset>
+    <legend id="Uwagi">Uwagi</legend>
+    <textarea name="message" rows="20" cols="100"></textarea>
+    </fieldset>
+    <input type="checkbox" name="odpowiedz"><label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum deleniti dolorem, adipisci saepe tempore optio officia laborum libero excepturi deserunt reprehenderit quibusdam, mollitia nobis voluptatem neque porro delectus non quaerat. Quod labore distinctio ducimus soluta quas quisquam quia quis voluptatibus deserunt libero dolores, culpa porro? Beatae doloremque sapiente voluptatibus!</label><br><br>
+    <input type="submit" value="Wyślij zapytanie">
+    </form>
+    </div>
+   <div>
+    <a href="#gora"><button>Przewiń w górę</button></a>
+   </div>
+</body>
+</html>
