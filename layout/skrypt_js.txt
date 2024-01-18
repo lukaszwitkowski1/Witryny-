@@ -1,0 +1,21 @@
+<script type="text/javascript">
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
+</script>
+
+
+Przykład użycia
+<button onclick="scrollToTop()">
+    Click to scroll to top
+</button>
+
+
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+    document.getElementById("myImg").className = "slideUp";
+  }
+}
